@@ -1,15 +1,16 @@
-with open("Notes.md", "a") as f:
-    f.write("This is a context check ")
+# def fibo(n):
+#     a, b = 0, 1
+#     for _ in range(n):
+#         yield a
+#         a, b = b, a+b
 
-# custom context
+# for num in fibo(10):
+#     print(num)
 
-class my_context:
-    def __enter__(self):
-        print("entering context....")
-        return self
-    
-    def __exit__(self, exc_type, exc_value, traceback):
-        print("exiting context....")
+# Here this is a generator function that does lazy eval one at a time
+# it doesn't load to memory?
 
-with my_context():
-    print("in")
+def hello():
+    pass
+
+print(hello.__name__) # prints the name of the function (metadata of func)
