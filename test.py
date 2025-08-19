@@ -1,23 +1,15 @@
-import time
+with open("Notes.md", "a") as f:
+    f.write("This is a context check ")
 
-def timer(func):
-    def wrapper(*args, **kwargs):
-        start = time.time()
-        result = func(*args, **kwargs)
-        end = time.time()
-        print(f"{func.__name__} ran in {end - start : }sec")
-        return result
-    return wrapper
+# custom context
 
-@timer
-def slow_function():
-    time.sleep(2)
-    print("done~")
+class my_context:
+    def __enter__(self):
+        print("entering context....")
+        return self
+    
+    def __exit__(self, exc_type, exc_value, traceback):
+        print("exiting context....")
 
-
-slow_function()
-
-# decorators
-# what does the func.__name__ do?
-# why did the wrapper function return itself?
-# and also what is the @timer what does it mean, the timer was not even called 
+with my_context():
+    print("in")
