@@ -1,31 +1,23 @@
-import math
-from functools import reduce
-from collections import Counter, deque, defaultdict
-from datetime import datetime
-import json
+import time
 
-# numbers = [1, 5, 54, 12, 66]
-# evens = filter(lambda x: x%2 == 0, numbers)
-# squares = map(lambda x: math.pow(x,2), evens)
-# sum = reduce(lambda a, b: a+b, squares)
+def timer(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        end = time.time()
+        print(f"{func.__name__} ran in {end - start : }sec")
+        return result
+    return wrapper
 
-# print(sum)
+@timer
+def slow_function():
+    time.sleep(2)
+    print("done~")
 
-word = "mississippi"
-letters = []
-group = defaultdict(list)
-    
-for w in word:
-    group[w[0]].append(w)
 
-print(group)
-print(Counter(word))
+slow_function()
 
-data = {
-    "name": "namura",
-    "skills": "none"
-}
-
-print(json.dumps(data))
-print(datetime.now())
-
+# decorators
+# what does the func.__name__ do?
+# why did the wrapper function return itself?
+# and also what is the @timer what does it mean, the timer was not even called 
