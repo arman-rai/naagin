@@ -1,16 +1,13 @@
-# def fibo(n):
-#     a, b = 0, 1
-#     for _ in range(n):
-#         yield a
-#         a, b = b, a+b
+import threading, time
 
-# for num in fibo(10):
-#     print(num)
+def worker(name):
+    print(f"starting {name}")
+    time.sleep(2)
+    print(f"finished {name}")
 
-# Here this is a generator function that does lazy eval one at a time
-# it doesn't load to memory?
+t1 = threading.Thread(target=worker, args=("thread 1",))
+t2 = threading.Thread(target=worker, args=("thread 2",))
 
-def hello():
-    pass
+t1.start()
+t2.start()
 
-print(hello.__name__) # prints the name of the function (metadata of func)
