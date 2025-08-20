@@ -11,3 +11,6 @@ t2 = threading.Thread(target=worker, args=("thread 2",))
 t1.start()
 t2.start()
 
+# Multithreading
+
+# Use threads for I/O-bound tasks (like web requests, file reads).
