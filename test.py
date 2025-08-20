@@ -1,12 +1,18 @@
-# multiprocessing
-# threads are limited so multi process and profit
+# asyync processes 
+# sab ekai choti bam bam, its best accourding to chatgpt re
 
-from multiprocessing import Process
+import asyncio
 
-def compute_square(x):
-    print(f"{x}^2 = {x*x}")
+async def say(msg, delay):
+    await asyncio.sleep(delay)
+    print(msg)
 
-processes = [Process(target=compute_square, args=(i,)) for i in range(5)]
+async def main():
+    await asyncio.gather(
+        say("Hello", 1),
+        say("This", 2),
+        say("is", 3),
+        say("Asyncio", 4)
+    )
 
-for p in processes: p.start()
-for p in processes: p.join()
+asyncio.run(main())
