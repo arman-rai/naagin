@@ -7,8 +7,8 @@ print("⏳️ Current Time:", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 def export_to_json(counter, filename=None):
     if not filename:
         filename = f"word_count_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.json"
-    with open(filename, "w", encoding="utf-8") as file:
-        json.dump(counter, file, indent=4)
+        with open(filename, "w", encoding="utf-8") as file:
+            json.dump(counter, file, indent=4)
     print(f"✅ Exported to {filename}")
 
 def count_words(text):
