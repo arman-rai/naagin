@@ -1,16 +1,12 @@
-import threading, time
+# multiprocessing
+# threads are limited so multi process and profit
 
-def worker(name):
-    print(f"starting {name}")
-    time.sleep(2)
-    print(f"finished {name}")
+from multiprocessing import Process
 
-t1 = threading.Thread(target=worker, args=("thread 1",))
-t2 = threading.Thread(target=worker, args=("thread 2",))
+def compute_square(x):
+    print(f"{x}^2 = {x*x}")
 
-t1.start()
-t2.start()
+processes = [Process(target=compute_square, args=(i,)) for i in range(5)]
 
-# Multithreading
-
-# Use threads for I/O-bound tasks (like web requests, file reads).
+for p in processes: p.start()
+for p in processes: p.join()
