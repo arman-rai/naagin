@@ -22,7 +22,7 @@ def read_task():
         print("\nNo tasks yet~")
 
 
-def save_tasks(tasks, filename=None): # filename none le k kaam garxa lol
+def save_tasks(tasks, filename=None): 
     if not filename:
         filename = "tasks_rn.json"
         with open(filename, "w", encoding="utf-8") as file:
@@ -33,6 +33,13 @@ create_task("Create taskmanager.py", priorty=True)
 create_task("Create a checklist")
 create_task("Create an weather API ")
 
+choice = input("Do you want to enter a new task?(yes/no)")
+
+if choice == "yes":
+    new_task = input("Enter task: ")
+    priorty = input("Is it a priorty task? (yes/no)")
+    create_task(new_task, priorty)
+
 read_task()
 
-save_tasks(tasks=tasks)
+save_tasks(tasks)
