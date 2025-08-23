@@ -1,0 +1,48 @@
+# Django specific
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+static/
+*.log
+local_settings.py
+*.pot
+
+# Django migrations
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+*.env
+
+# IDE specific
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Coverage & Testing
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+coverage.xml
+*.cover
+
+# Temp files
+*.bak
+*.tmp
+
+# Documentation
+docs/_build/
+
+burnerr_ctfs/
