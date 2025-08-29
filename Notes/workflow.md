@@ -32,6 +32,18 @@ python manage.py shell → test Python/Django stuff interactively
 
 python manage.py runserver → start dev server
 
+# file uses
+init.py makes the whole directory look like a package
+asgi and wsgi, config files that communicate with the web server
+urls.py routes to different django apps
+settings has db engines, apps list etc
+manage.py is a special file that acts as a CLI 
+
+inside an app like `blog`
+create a file urls.py which includes different URL routes which will be connected to views
+
+# templating
+inside the app folder or blog/templates which will be rendered in the blog/views 
 
 # Features:
 Models → define your tables
@@ -44,3 +56,6 @@ Templates → HTML front-end
 
 Static files → CSS, JS, images
 
+
+# Web framework 
+only framework nothing else, example react is a library not a framweork

@@ -2,7 +2,7 @@ MVC (Model-View-Controller) is a design pattern used for developing web applicat
 
 Model:
 
-Represents the data and the business logic of the application.
+Represents the data and the business logic of the application. db
 Handles database interactions, such as querying and saving data.
 In Django, models are defined as Python classes in models.py and map to database tables.
 Example:
@@ -17,7 +17,7 @@ class Product(models.Model):
 
 View:
 
-Handles the presentation logic and user interface.
+Handles the presentation logic and user interface. Logic
 In Django, views are Python functions or classes in views.py that process requests and return responses (e.g., HTML, JSON).
 Example:
 ```
@@ -43,6 +43,8 @@ urlpatterns = [
     path('products/', views.product_list, name='product_list'),
 ]
 
+Template:
+UI html markups dynamic components
 ```
 
 Note: Django follows the MTV (Model-Template-View) pattern, which is conceptually similar to MVC:

@@ -18,3 +18,5 @@ This is a context check This is a context check
 generators = memory-efficient, great for streams of data.
 so nums = [x**2 for x in range(10**6)]  is better than nums = x**2 for x in range(10**6)
 
+
+
