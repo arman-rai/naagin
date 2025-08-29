@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Arman Rai - Resume{% endblock %}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            font-size: 14px;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1rem;
+        }
+        nav {
+            background: #444;
+            padding: 5px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ddd;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+            max-width: 1000px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        section {
+            margin-bottom: 10px;
+        }
+        section h2 {
+            border-bottom: 1px solid #333;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+        .skills ul li {
+            background: #f4f4f9;
+            margin: 3px 0;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            margin-top: 10px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Arman Rai</h1>
+        <p>Security Researcher | Web Developer | CTF player</p>
+    </header>
+    <nav>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="experience">
+            <h2>Experience</h2>
+            <p><strong>Dish washer</strong> - Home (2018 - Present)</p>
+            <p>Have spent around 500+ hours in the kitchen</p>
+            <p><strong>Gamer</strong> - Online (2023 - Present)</p>
+            <p>Played PC games since I got a high end PC.</p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <p><strong>Bachelor of Science in Computer Science and Information Technology</strong></p>
+            <p>Patan Campus - Patan (2021 - Present)</p>
+        </section>
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages: Python, JavaScript, C++</li>
+                <li>Web Development: HTML, Tailwind, Django, React</li>
+                <li>Tools: Git, Docker, Linux (not arch btw)</li>
+                <li>Problem Solving and Algorithms</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: admin@gmail.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/rai-arman" target="_blank">linkedin.com/in/rai-arman</a></p>
+            <p>Github: <a href="https://github.com/arman-rai" target="_blank">github.com/arman-rai</a></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 Arman Rai. All lefts reserved.</p>
+    </footer>
+</body>
+</html>
